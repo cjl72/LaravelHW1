@@ -5,11 +5,10 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use App\Models\Post;
+use App\Models\User;
 
-class PostTest extends TestCase
+class UserTest extends TestCase
 {
-    use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -17,8 +16,8 @@ class PostTest extends TestCase
      */
     public function test_example()
     {
-        $post = Post::factory()->create();
-        $post->title = "Just Had Lunch";
-        $post->save();
+        $user = User::factory()->create();
+        $user->name = "Connor Letko";
+        $user->save();
     }
 }
