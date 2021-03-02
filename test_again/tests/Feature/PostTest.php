@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use App\Models\Post;
 
 class PostTest extends TestCase
 {
@@ -15,8 +16,8 @@ class PostTest extends TestCase
      */
     public function test_example()
     {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
+        $post = Post::factory()->create();
+        $post->title = "Just Had Lunch";
+        $post->save();
     }
 }
